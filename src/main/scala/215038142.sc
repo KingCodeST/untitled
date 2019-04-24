@@ -1,13 +1,14 @@
 
 ////1
-//val a=10
-////
-////
-//val b=20
-////
-//
-//assert(a>=b)
-//
+def lessThan (a: Int, b: Int): Unit = {
+  if(a<b){
+    print("a is less than b")
+  }
+  if(b<a){
+    print("a is not less than b")
+  }
+}
+
 
 ////2
 
@@ -49,16 +50,12 @@
 
 
 
-//def isArg1GreaterThanArg2(d: Double,b:Double): Double
-//
-//val t1 =isArg1GreaterThanArg2(4.1,4.12)
-//print(t1)
-////assert("")
-//
-//val t2 =isArg1GreaterThanArg2(2.1,1.2)
-//print(t2)
+def isArg1GreaterThanArg2(a: Double, b: Double): Boolean = { a < b}
+val t1 = isArg1GreaterThanArg2(4.1, 4.12)
+assert(4.1 < 4.12)
+val t2 = isArg1GreaterThanArg2(2.1, 1.2)
+assert(2.1 > 1.2)
 
-//assert()
 
 /////5
 def getMe(str: String) :String = str.toLowerCase()
@@ -92,18 +89,21 @@ val m2 =manyTimesString("123",2)
 //assert("123123"==m2,"")
 print(m2)
 /////8
-////less than 18.5 between 18.5 -24.9 is normal weight bmi <25 over weight
+def addStrings (a: String , b: String): String = {a concat b}
+val s1 = addStrings("abc", "def")
+assert("abcdef"==s1)
+val s2 = addStrings("zyx", "abc")
+assert("zyxabc"==s2)
 
-def bmiStatus(i: Int, i1: Int): Int
+def manyTimesString (a:String, b:Int): String = {a * b}
+val m1 = manyTimesString("abc",3)
+assert("abcabcabc" == m1)
+val m2 = manyTimesString("123", 2)
+assert("123123"==m2)
 
-val normal =bmiStatus(160,68)
-//assert("Normal weight" ==normal,"Expected Normal weight,Got "+normal)
-
-val overweight= bmiStatus(180,60)
-//assert("Overweight"==overweight,"expre")
-
-
-
+def bmiStatus (height: Double , kg: Double): Double = {(kg/(height*height))}
+val normal = bmiStatus(160, 68)
+assert("Normal weight" == normal, "Expected Normal weight, Got" +normal)
 
 
 

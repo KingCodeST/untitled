@@ -85,21 +85,12 @@ val m1 =manyTimesString("abc",3)
 //assert("abcabcabc"==m1,"")
 print(m1)
 
-val m2 =manyTimesString("123",2)
+val m2 = manyTimesString("123",2)
 //assert("123123"==m2,"")
 print(m2)
 /////8
-def addStrings (a: String , b: String): String = {a concat b}
-val s1 = addStrings("abc", "def")
-assert("abcdef"==s1)
-val s2 = addStrings("zyx", "abc")
-assert("zyxabc"==s2)
 
-def manyTimesString (a:String, b:Int): String = {a * b}
-val m1 = manyTimesString("abc",3)
-assert("abcabcabc" == m1)
-val m2 = manyTimesString("123", 2)
-assert("123123"==m2)
+
 
 def bmiStatus (height: Double , kg: Double): Double = {(kg/(height*height))}
 val normal = bmiStatus(160, 68)
@@ -116,25 +107,24 @@ assert("Normal weight" == normal, "Expected Normal weight, Got" +normal)
 //print("this is equal to b")
 
 
-//////10 create a list
-//var s=""
-//val v = List(1,5,7,8)
+////// question 10 create a list
+var s=""
+val v = List(1,5,7,8)
+
+ v.foreach(print(_))
 //
-// v.foreach(s=>s*7)
-//
 
 
-/////11 repeat
+///// question 11 repeat
 
-//var s=""
-//val v=List(1,5,7,8)
-//v.foreach(s=>s*7)
+val v11=List(1,5,7,8)
+v11.foreach(print(_))
 
 ////////  15
 
-//var s=""
-//val words =List("word","cat","animal")
-//words.foreach(s=>s*50)
+
+val words =List("word","cat","animal")
+words.foreach(println)
 
 /////////14
 
